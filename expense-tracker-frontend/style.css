@@ -1,0 +1,135 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+/* Form Styles */
+form {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.6s ease-out;
+}
+
+label {
+  color: #ddd;
+  font-size: 1.2em;
+  margin-top: 10px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: #2c2c2c;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1em;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #64ffda;
+  box-shadow: 0 0 10px #64ffda;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #64ffda;
+  border: none;
+  color: #333;
+  font-size: 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #1ab184;
+  transform: scale(1.05);
+}
+
+/* Expense List Styles */
+ul {
+  list-style: none;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  padding: 0;
+}
+
+li {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1.1em;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.03);
+  background-color: #3a3a3a;
+}
+
+li .delete {
+  color: #ff3e3e;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li .delete:hover {
+  color: #ff1c1c;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
